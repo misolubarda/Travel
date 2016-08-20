@@ -13,6 +13,10 @@
 		EBDBD5E31D685C7400984EC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5E01D685C7400984EC4 /* main.m */; };
 		EBDBD5E61D685C8500984EC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDBD5E41D685C8500984EC4 /* LaunchScreen.storyboard */; };
 		EBDBD5E71D685C8500984EC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDBD5E51D685C8500984EC4 /* Main.storyboard */; };
+		EBDBD5EB1D685D6F00984EC4 /* APIRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5EA1D685D6F00984EC4 /* APIRequestProtocol.swift */; };
+		EBDBD5EE1D685E0600984EC4 /* FlightsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5ED1D685E0600984EC4 /* FlightsRequest.swift */; };
+		EBDBD5F01D685E1C00984EC4 /* TrainsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5EF1D685E1C00984EC4 /* TrainsRequest.swift */; };
+		EBDBD5F21D685E2A00984EC4 /* BusesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5F11D685E2A00984EC4 /* BusesRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		EBDBD5E01D685C7400984EC4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EBDBD5E41D685C8500984EC4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBDBD5E51D685C8500984EC4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EBDBD5EA1D685D6F00984EC4 /* APIRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestProtocol.swift; sourceTree = "<group>"; };
+		EBDBD5EC1D685D9000984EC4 /* Travel-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Travel-Bridging-Header.h"; sourceTree = "<group>"; };
+		EBDBD5ED1D685E0600984EC4 /* FlightsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightsRequest.swift; sourceTree = "<group>"; };
+		EBDBD5EF1D685E1C00984EC4 /* TrainsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainsRequest.swift; sourceTree = "<group>"; };
+		EBDBD5F11D685E2A00984EC4 /* BusesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusesRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +76,7 @@
 		EBDBD5DA1D685C0000984EC4 /* Entry point */ = {
 			isa = PBXGroup;
 			children = (
+				EBDBD5EC1D685D9000984EC4 /* Travel-Bridging-Header.h */,
 				EBDBD5DD1D685C7400984EC4 /* AppDelegate.h */,
 				EBDBD5DE1D685C7400984EC4 /* AppDelegate.m */,
 				EBDBD5DF1D685C7400984EC4 /* Info.plist */,
@@ -78,6 +88,7 @@
 		EBDBD5DB1D685C0D00984EC4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EBDBD5E81D685D3500984EC4 /* Server */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -89,6 +100,17 @@
 				EBDBD5E51D685C8500984EC4 /* Main.storyboard */,
 			);
 			path = "User interface";
+			sourceTree = "<group>";
+		};
+		EBDBD5E81D685D3500984EC4 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				EBDBD5EA1D685D6F00984EC4 /* APIRequestProtocol.swift */,
+				EBDBD5ED1D685E0600984EC4 /* FlightsRequest.swift */,
+				EBDBD5EF1D685E1C00984EC4 /* TrainsRequest.swift */,
+				EBDBD5F11D685E2A00984EC4 /* BusesRequest.swift */,
+			);
+			path = Server;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +185,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBDBD5E31D685C7400984EC4 /* main.m in Sources */,
+				EBDBD5F01D685E1C00984EC4 /* TrainsRequest.swift in Sources */,
+				EBDBD5F21D685E2A00984EC4 /* BusesRequest.swift in Sources */,
+				EBDBD5EE1D685E0600984EC4 /* FlightsRequest.swift in Sources */,
+				EBDBD5EB1D685D6F00984EC4 /* APIRequestProtocol.swift in Sources */,
 				EBDBD5E11D685C7400984EC4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,11 +282,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Travel/Entry point/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.test.Travel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Travel/Entry point/Travel-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -268,11 +297,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Travel/Entry point/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.test.Travel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Travel/Entry point/Travel-Bridging-Header.h";
 			};
 			name = Release;
 		};
