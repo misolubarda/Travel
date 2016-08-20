@@ -17,6 +17,11 @@
 		EBDBD5EE1D685E0600984EC4 /* FlightsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5ED1D685E0600984EC4 /* FlightsRequest.swift */; };
 		EBDBD5F01D685E1C00984EC4 /* TrainsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5EF1D685E1C00984EC4 /* TrainsRequest.swift */; };
 		EBDBD5F21D685E2A00984EC4 /* BusesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5F11D685E2A00984EC4 /* BusesRequest.swift */; };
+		EBDBD5F51D68625D00984EC4 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5F41D68625D00984EC4 /* Trip.swift */; };
+		EBDBD5F71D6864D500984EC4 /* BusTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5F61D6864D500984EC4 /* BusTrip.swift */; };
+		EBDBD5F91D6865AE00984EC4 /* FlightTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5F81D6865AE00984EC4 /* FlightTrip.swift */; };
+		EBDBD5FB1D6865B600984EC4 /* TrainTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5FA1D6865B600984EC4 /* TrainTrip.swift */; };
+		EBDBD5FF1D6872D100984EC4 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5FE1D6872D100984EC4 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +38,11 @@
 		EBDBD5ED1D685E0600984EC4 /* FlightsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightsRequest.swift; sourceTree = "<group>"; };
 		EBDBD5EF1D685E1C00984EC4 /* TrainsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainsRequest.swift; sourceTree = "<group>"; };
 		EBDBD5F11D685E2A00984EC4 /* BusesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusesRequest.swift; sourceTree = "<group>"; };
+		EBDBD5F41D68625D00984EC4 /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		EBDBD5F61D6864D500984EC4 /* BusTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusTrip.swift; sourceTree = "<group>"; };
+		EBDBD5F81D6865AE00984EC4 /* FlightTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightTrip.swift; sourceTree = "<group>"; };
+		EBDBD5FA1D6865B600984EC4 /* TrainTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainTrip.swift; sourceTree = "<group>"; };
+		EBDBD5FE1D6872D100984EC4 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +98,7 @@
 		EBDBD5DB1D685C0D00984EC4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EBDBD5FD1D6872BA00984EC4 /* Application */,
 				EBDBD5E81D685D3500984EC4 /* Server */,
 			);
 			path = Model;
@@ -105,12 +116,32 @@
 		EBDBD5E81D685D3500984EC4 /* Server */ = {
 			isa = PBXGroup;
 			children = (
+				EBDBD5F31D6861A700984EC4 /* Entities */,
 				EBDBD5EA1D685D6F00984EC4 /* APIRequestProtocol.swift */,
 				EBDBD5ED1D685E0600984EC4 /* FlightsRequest.swift */,
 				EBDBD5EF1D685E1C00984EC4 /* TrainsRequest.swift */,
 				EBDBD5F11D685E2A00984EC4 /* BusesRequest.swift */,
 			);
 			path = Server;
+			sourceTree = "<group>";
+		};
+		EBDBD5F31D6861A700984EC4 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				EBDBD5F41D68625D00984EC4 /* Trip.swift */,
+				EBDBD5F61D6864D500984EC4 /* BusTrip.swift */,
+				EBDBD5F81D6865AE00984EC4 /* FlightTrip.swift */,
+				EBDBD5FA1D6865B600984EC4 /* TrainTrip.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		EBDBD5FD1D6872BA00984EC4 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				EBDBD5FE1D6872D100984EC4 /* Helper.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,11 +215,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBDBD5FF1D6872D100984EC4 /* Helper.swift in Sources */,
+				EBDBD5F51D68625D00984EC4 /* Trip.swift in Sources */,
 				EBDBD5E31D685C7400984EC4 /* main.m in Sources */,
 				EBDBD5F01D685E1C00984EC4 /* TrainsRequest.swift in Sources */,
+				EBDBD5FB1D6865B600984EC4 /* TrainTrip.swift in Sources */,
 				EBDBD5F21D685E2A00984EC4 /* BusesRequest.swift in Sources */,
 				EBDBD5EE1D685E0600984EC4 /* FlightsRequest.swift in Sources */,
 				EBDBD5EB1D685D6F00984EC4 /* APIRequestProtocol.swift in Sources */,
+				EBDBD5F91D6865AE00984EC4 /* FlightTrip.swift in Sources */,
+				EBDBD5F71D6864D500984EC4 /* BusTrip.swift in Sources */,
 				EBDBD5E11D685C7400984EC4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
