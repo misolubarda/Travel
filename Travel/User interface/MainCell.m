@@ -8,6 +8,15 @@
 
 #import "MainCell.h"
 
+@interface MainCell ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *durationLabel;
+
+@end
+
 @implementation MainCell
 
 - (void)awakeFromNib {

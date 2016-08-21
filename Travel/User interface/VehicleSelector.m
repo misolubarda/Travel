@@ -9,6 +9,12 @@
 #import "VehicleSelector.h"
 #import "HMSegmentedControl.h"
 
+@interface VehicleSelector ()
+
+@property (nonatomic, strong) HMSegmentedControl *control;
+
+@end
+
 @implementation VehicleSelector
 
 - (void)awakeFromNib {
@@ -24,6 +30,7 @@
         }
     };
     control.translatesAutoresizingMaskIntoConstraints = NO;
+    self.control = control;
     [self addSubview:control];
     
     NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[control]-0-|" options:0 metrics:nil views:@{@"control" : control}];
@@ -50,6 +57,10 @@
         case VehicleSelectorButtonType_Flight: return @"Flight";
         case VehicleSelectorButtonType_Count: return @"";
     }
+}
+
+- (void)selectButton:(VehicleSelectorButtonType)type {
+    self.control.selectedSegmentIndex = type;
 }
 
 @end

@@ -23,6 +23,8 @@ typedef NS_ENUM(NSUInteger, VehicleSelectorButtonType) {
 
 @interface VehicleSelector : UIView
 
-@property (nonatomic, weak) id<VehicleSelectorDelegate> delegate;
+@property (nonatomic, weak) IBOutlet id<VehicleSelectorDelegate> delegate;
+
+- (void)selectButton:(VehicleSelectorButtonType)type;
 
 @end

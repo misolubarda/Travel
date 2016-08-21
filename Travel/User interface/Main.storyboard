@@ -7,7 +7,7 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Delegate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
@@ -31,6 +31,9 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mf9-AO-gKH" userLabel="Buttons container" customClass="VehicleSelector">
                                         <rect key="frame" x="0.0" y="69" width="600" height="70"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="3PD-Yn-4dD"/>
+                                        </connections>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jun 07" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5n-I3-7Am">
                                         <rect key="frame" x="279" y="40" width="43" height="17"/>
@@ -101,6 +104,12 @@
                                                 <constraint firstItem="6EV-16-Gf0" firstAttribute="width" secondItem="sm6-Fq-4rP" secondAttribute="width" multiplier="200:600" id="lVO-jt-NPR"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="durationLabel" destination="VL9-ao-yRK" id="Sq3-IA-ge5"/>
+                                            <outlet property="logoImageView" destination="6EV-16-Gf0" id="2RU-GZ-E75"/>
+                                            <outlet property="priceLabel" destination="RJn-Z2-8Ey" id="up9-UA-g40"/>
+                                            <outlet property="timeLabel" destination="Age-wS-Yku" id="U1y-bO-b68"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -149,6 +158,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="zEi-6B-3ft" id="BJr-xi-M0g"/>
                         <outlet property="vehicleSelector" destination="mf9-AO-gKH" id="q96-XY-APM"/>
                     </connections>
                 </viewController>
