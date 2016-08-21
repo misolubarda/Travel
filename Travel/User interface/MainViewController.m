@@ -7,13 +7,30 @@
 //
 
 #import "MainViewController.h"
+#import "VehicleSelector.h"
 
-@interface MainViewController ()
+@interface MainViewController () <VehicleSelectorDelegate>
+
+@property (weak, nonatomic) IBOutlet VehicleSelector *vehicleSelector;
 
 @end
 
 @implementation MainViewController
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+}
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    self.vehicleSelector.delegate = self;
+}
+
+#pragma mark - VehicleSelectorDelegate
+
+- (void)vehicleSelected:(VehicleSelectorButtonType)type {
+    
+}
 
 @end

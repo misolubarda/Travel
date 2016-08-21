@@ -28,7 +28,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mf9-AO-gKH">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mf9-AO-gKH" userLabel="Buttons container" customClass="VehicleSelector">
                                         <rect key="frame" x="0.0" y="69" width="600" height="70"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
@@ -148,6 +148,9 @@
                             <constraint firstItem="52M-an-nXm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mFV-dZ-yvS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="vehicleSelector" destination="mf9-AO-gKH" id="q96-XY-APM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
