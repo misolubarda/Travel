@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol Trip: class {
+protocol Trip: NSObjectProtocol {
     
     var vehicleID: Int {get set}
     var providerLogo: NSURL {get set}
@@ -68,6 +68,20 @@ extension Trip {
         self.departureTime = departure
         self.arrivalTime = arrival
         self.stops = stopsNum
+    }
+    
+    
+    func exportToJSONDict() -> [String: AnyObject] {
+        
+        var jsonDict = [String: AnyObject]()
+        jsonDict["id"] = self.vehicleID
+        jsonDict["provider_logo"] = self.providerLogo.absoluteString
+        jsonDict["price_in_euros"] = self.priceInEuro
+        jsonDict["departure_time"] = Helper.dateFormatter().stringFromDate(self.departureTime)
+        jsonDict["arrival_time"] = Helper.dateFormatter().stringFromDate(self.arrivalTime)
+        jsonDict["number_of_stops"] = self.stops
+        
+        return jsonDict
     }
 }
 

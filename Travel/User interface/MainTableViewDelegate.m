@@ -12,7 +12,10 @@
 #import "MainCell.h"
 #import "Travel-Swift.h"
 
-@interface MainTableViewDelegate () <UITableViewDelegate, UITableViewDataSource>
+@interface MainTableViewDelegate ()
+
+@property (nonatomic, strong) NSArray *trips;
+@property (nonatomic) Class tripClass;
 
 @end
 
@@ -20,11 +23,20 @@
 
 static NSString *reuseIdentifier = @"reuseIdentifier";
 
+- (void)setupWithTrips:(NSArray *)trips ofClass:(Class)tripClass {
+    self.trips = trips;
+    self.tripClass = tripClass;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MainCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     
     if (!cell) {
         cell = [[MainCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
+    }
+    
+    if (self.tripClass == [TrainTrip class] || self.tripClass == [BusTrip class] || self.tripClass == [FlightTrip class]) {
+        //TODO: configure cell
     }
     
     return cell;

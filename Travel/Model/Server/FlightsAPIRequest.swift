@@ -20,18 +20,15 @@ import Foundation
     var endpointPath: String {
         return "w60i"
     }
-    
+        
     /// Required by protocol (see APIRequestProtocol)
-    var responseParsing: ((data: NSData) throws -> [BusTrip]) = { (data) in
+    var responseParsing: ((data: NSData) throws -> [FlightTrip]) = { (data) in
         guard let jsonArray = try NSJSONSerialization.JSONObjectWithData(data, options: []) as? [[String: AnyObject]] else {
             throw FlightsAPIRequestError.JSONRootArrayFromData
         }
         
-        var trips = [BusTrip]()
-        
-        for jsonDict in jsonArray {
-            let busTrip = try BusTrip(JSONDict: jsonDict)
-            trips.append(busTrip)
+        var trips: [FlightTrip] = try jsonArray.map {
+            try FlightTrip(JSONDict: $0)
         }
         
         return trips

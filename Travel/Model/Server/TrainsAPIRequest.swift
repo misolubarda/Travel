@@ -22,16 +22,13 @@ import Foundation
     }
     
     /// Required by protocol (see APIRequestProtocol)
-    var responseParsing: ((data: NSData) throws -> [BusTrip]) = { (data) in
+    var responseParsing: ((data: NSData) throws -> [TrainTrip]) = { (data) in
         guard let jsonArray = try NSJSONSerialization.JSONObjectWithData(data, options: []) as? [[String: AnyObject]] else {
             throw TrainsAPIRequestError.JSONRootArrayFromData
         }
         
-        var trips = [BusTrip]()
-        
-        for jsonDict in jsonArray {
-            let busTrip = try BusTrip(JSONDict: jsonDict)
-            trips.append(busTrip)
+        var trips: [TrainTrip] = try jsonArray.map {
+            try TrainTrip(JSONDict: $0)
         }
         
         return trips

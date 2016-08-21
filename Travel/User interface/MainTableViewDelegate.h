@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MainTableViewDelegate : NSObject
+@interface MainTableViewDelegate : NSObject <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) NSArray *trips;
+- (void)setupWithTrips:(NSArray *)trips ofClass:(Class)tripClass;
 
 @end

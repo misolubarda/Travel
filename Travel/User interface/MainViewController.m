@@ -24,15 +24,18 @@
 
 @implementation MainViewController
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    
-    self.tableViewDelegate = [[MainTableViewDelegate alloc] init];
+- (MainTableViewDelegate *)tableViewDelegate {
+    if (!_tableViewDelegate) {
+        _tableViewDelegate = [[MainTableViewDelegate alloc] init];
+    }
+    return _tableViewDelegate;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.delegate = self.tableViewDelegate;
+    self.tableView.dataSource = self.tableViewDelegate;
     [self.vehicleSelector selectButton:VehicleSelectorButtonType_Train];
     [self vehicleSelected:VehicleSelectorButtonType_Train];
 }
@@ -44,7 +47,10 @@
     switch (type) {
         case VehicleSelectorButtonType_Train:
         {
-            TrainsAPIRequest *request = [[TrainsAPIRequest alloc] initWithBaseURL:<#(NSURL * _Nonnull)#> responseQueue:<#(dispatch_queue_t _Nonnull)#>]
+            [TripManager fetchTrainTripsWithCompletion:^(NSArray<TrainTrip *> * _Nullable response) {
+                [self.tableViewDelegate setupWithTrips:response ofClass:[TrainTrip class]];
+                [self.tableView reloadData];
+            }];
             break;
         }
         default:

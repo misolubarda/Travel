@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		6211285B4AF4606D0D537A34 /* libPods-TravelUnitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9C8DC72457E9D2EB137796 /* libPods-TravelUnitTests.a */; };
 		95E328EC0D7E466F0C97BB6C /* libPods-Travel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24502AE3CE805B7AC515435F /* libPods-Travel.a */; };
+		EB4AF29D1D69F33B00C25D45 /* BusTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4AF2991D69F33B00C25D45 /* BusTrip.swift */; };
+		EB4AF29E1D69F33B00C25D45 /* FlightTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4AF29A1D69F33B00C25D45 /* FlightTrip.swift */; };
+		EB4AF29F1D69F33B00C25D45 /* TrainTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4AF29B1D69F33B00C25D45 /* TrainTrip.swift */; };
+		EB4AF2A01D69F33B00C25D45 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4AF29C1D69F33B00C25D45 /* Trip.swift */; };
+		EB4AF2A41D69F53700C25D45 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4AF2A31D69F53700C25D45 /* LocalStorage.swift */; };
+		EB4AF2A61D69FA8B00C25D45 /* TripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4AF2A51D69FA8B00C25D45 /* TripTests.swift */; };
+		EB4AF2A71D69FAD900C25D45 /* BusTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4AF2991D69F33B00C25D45 /* BusTrip.swift */; };
+		EB4AF2A81D69FADC00C25D45 /* FlightTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4AF29A1D69F33B00C25D45 /* FlightTrip.swift */; };
+		EB4AF2A91D69FADC00C25D45 /* TrainTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4AF29B1D69F33B00C25D45 /* TrainTrip.swift */; };
+		EB4AF2AA1D69FADC00C25D45 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4AF29C1D69F33B00C25D45 /* Trip.swift */; };
 		EBDBD5D01D685A5A00984EC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBDBD5CF1D685A5A00984EC4 /* Assets.xcassets */; };
 		EBDBD5E11D685C7400984EC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5DE1D685C7400984EC4 /* AppDelegate.m */; };
 		EBDBD5E21D685C7400984EC4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBDBD5DF1D685C7400984EC4 /* Info.plist */; };
@@ -19,17 +29,9 @@
 		EBDBD5EE1D685E0600984EC4 /* FlightsAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5ED1D685E0600984EC4 /* FlightsAPIRequest.swift */; };
 		EBDBD5F01D685E1C00984EC4 /* TrainsAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5EF1D685E1C00984EC4 /* TrainsAPIRequest.swift */; };
 		EBDBD5F21D685E2A00984EC4 /* BusesAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5F11D685E2A00984EC4 /* BusesAPIRequest.swift */; };
-		EBDBD5F51D68625D00984EC4 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5F41D68625D00984EC4 /* Trip.swift */; };
-		EBDBD5F71D6864D500984EC4 /* BusTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5F61D6864D500984EC4 /* BusTrip.swift */; };
-		EBDBD5F91D6865AE00984EC4 /* FlightTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5F81D6865AE00984EC4 /* FlightTrip.swift */; };
-		EBDBD5FB1D6865B600984EC4 /* TrainTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5FA1D6865B600984EC4 /* TrainTrip.swift */; };
 		EBDBD5FF1D6872D100984EC4 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5FE1D6872D100984EC4 /* Helper.swift */; };
 		EBDBD6071D6888AE00984EC4 /* APIRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD6061D6888AE00984EC4 /* APIRequestTests.swift */; };
-		EBDBD6111D688BBD00984EC4 /* BusTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5F61D6864D500984EC4 /* BusTrip.swift */; };
 		EBDBD6151D688CF000984EC4 /* BusesJSONString.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBDBD6141D688CF000984EC4 /* BusesJSONString.txt */; };
-		EBDBD6161D69A66900984EC4 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5F41D68625D00984EC4 /* Trip.swift */; };
-		EBDBD6171D69A66D00984EC4 /* FlightTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5F81D6865AE00984EC4 /* FlightTrip.swift */; };
-		EBDBD6181D69A66D00984EC4 /* TrainTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5FA1D6865B600984EC4 /* TrainTrip.swift */; };
 		EBDBD6191D69A67000984EC4 /* APIRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5EA1D685D6F00984EC4 /* APIRequestProtocol.swift */; };
 		EBDBD61C1D69A67600984EC4 /* BusesAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5F11D685E2A00984EC4 /* BusesAPIRequest.swift */; };
 		EBDBD61D1D69A67600984EC4 /* FlightsAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5ED1D685E0600984EC4 /* FlightsAPIRequest.swift */; };
@@ -41,6 +43,7 @@
 		EBDBD6291D69B6BF00984EC4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD6281D69B6BF00984EC4 /* MainViewController.m */; };
 		EBDBD62F1D69CF5C00984EC4 /* VehicleSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD62E1D69CF5C00984EC4 /* VehicleSelector.m */; };
 		EBDBD6321D69D7F200984EC4 /* MainTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD6311D69D7F200984EC4 /* MainTableViewDelegate.m */; };
+		EBF6D8B31D69E97700916F4C /* TripManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF6D8B21D69E97700916F4C /* TripManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,12 @@
 		3ECEF06ACA4E592C5002AD17 /* Pods-TravelUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelUnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravelUnitTests/Pods-TravelUnitTests.release.xcconfig"; sourceTree = "<group>"; };
 		517B851E18F16DBA82197090 /* Pods-Travel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.debug.xcconfig"; sourceTree = "<group>"; };
 		7AF62B7C5273C7C15141AD8A /* Pods-TravelUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelUnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelUnitTests/Pods-TravelUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EB4AF2991D69F33B00C25D45 /* BusTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusTrip.swift; sourceTree = "<group>"; };
+		EB4AF29A1D69F33B00C25D45 /* FlightTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightTrip.swift; sourceTree = "<group>"; };
+		EB4AF29B1D69F33B00C25D45 /* TrainTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainTrip.swift; sourceTree = "<group>"; };
+		EB4AF29C1D69F33B00C25D45 /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		EB4AF2A31D69F53700C25D45 /* LocalStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
+		EB4AF2A51D69FA8B00C25D45 /* TripTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTests.swift; sourceTree = "<group>"; };
 		EBDBD5C01D685A5900984EC4 /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBDBD5CF1D685A5A00984EC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBDBD5DD1D685C7400984EC4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,10 +81,6 @@
 		EBDBD5ED1D685E0600984EC4 /* FlightsAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightsAPIRequest.swift; sourceTree = "<group>"; };
 		EBDBD5EF1D685E1C00984EC4 /* TrainsAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainsAPIRequest.swift; sourceTree = "<group>"; };
 		EBDBD5F11D685E2A00984EC4 /* BusesAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusesAPIRequest.swift; sourceTree = "<group>"; };
-		EBDBD5F41D68625D00984EC4 /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
-		EBDBD5F61D6864D500984EC4 /* BusTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusTrip.swift; sourceTree = "<group>"; };
-		EBDBD5F81D6865AE00984EC4 /* FlightTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightTrip.swift; sourceTree = "<group>"; };
-		EBDBD5FA1D6865B600984EC4 /* TrainTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainTrip.swift; sourceTree = "<group>"; };
 		EBDBD5FE1D6872D100984EC4 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		EBDBD6041D6888AE00984EC4 /* TravelUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBDBD6061D6888AE00984EC4 /* APIRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestTests.swift; sourceTree = "<group>"; };
@@ -91,6 +96,7 @@
 		EBDBD62E1D69CF5C00984EC4 /* VehicleSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleSelector.m; sourceTree = "<group>"; };
 		EBDBD6301D69D7F200984EC4 /* MainTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewDelegate.h; sourceTree = "<group>"; };
 		EBDBD6311D69D7F200984EC4 /* MainTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewDelegate.m; sourceTree = "<group>"; };
+		EBF6D8B21D69E97700916F4C /* TripManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripManager.swift; sourceTree = "<group>"; };
 		FD9C8DC72457E9D2EB137796 /* libPods-TravelUnitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TravelUnitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -132,6 +138,25 @@
 				FD9C8DC72457E9D2EB137796 /* libPods-TravelUnitTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB4AF2981D69F33B00C25D45 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				EB4AF2991D69F33B00C25D45 /* BusTrip.swift */,
+				EB4AF29A1D69F33B00C25D45 /* FlightTrip.swift */,
+				EB4AF29B1D69F33B00C25D45 /* TrainTrip.swift */,
+				EB4AF29C1D69F33B00C25D45 /* Trip.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		EB4AF2A21D69F51F00C25D45 /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				EB4AF2A31D69F53700C25D45 /* LocalStorage.swift */,
+			);
+			path = LocalStorage;
 			sourceTree = "<group>";
 		};
 		EBDBD5B71D685A5900984EC4 = {
@@ -180,6 +205,7 @@
 		EBDBD5DB1D685C0D00984EC4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EB4AF2981D69F33B00C25D45 /* Entities */,
 				EBDBD5FD1D6872BA00984EC4 /* Application */,
 				EBDBD5E81D685D3500984EC4 /* Server */,
 			);
@@ -206,7 +232,6 @@
 		EBDBD5E81D685D3500984EC4 /* Server */ = {
 			isa = PBXGroup;
 			children = (
-				EBDBD5F31D6861A700984EC4 /* Entities */,
 				EBDBD5EA1D685D6F00984EC4 /* APIRequestProtocol.swift */,
 				EBDBD5F11D685E2A00984EC4 /* BusesAPIRequest.swift */,
 				EBDBD5ED1D685E0600984EC4 /* FlightsAPIRequest.swift */,
@@ -215,21 +240,12 @@
 			path = Server;
 			sourceTree = "<group>";
 		};
-		EBDBD5F31D6861A700984EC4 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				EBDBD5F41D68625D00984EC4 /* Trip.swift */,
-				EBDBD5F61D6864D500984EC4 /* BusTrip.swift */,
-				EBDBD5F81D6865AE00984EC4 /* FlightTrip.swift */,
-				EBDBD5FA1D6865B600984EC4 /* TrainTrip.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
 		EBDBD5FD1D6872BA00984EC4 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				EB4AF2A21D69F51F00C25D45 /* LocalStorage */,
 				EBDBD5FE1D6872D100984EC4 /* Helper.swift */,
+				EBF6D8B21D69E97700916F4C /* TripManager.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -238,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				EBDBD6061D6888AE00984EC4 /* APIRequestTests.swift */,
+				EB4AF2A51D69FA8B00C25D45 /* TripTests.swift */,
 				EBDBD6081D6888AE00984EC4 /* Info.plist */,
 				EBDBD6141D688CF000984EC4 /* BusesJSONString.txt */,
 				EBDBD6201D69AE2D00984EC4 /* FlightsJSONString.txt */,
@@ -452,18 +469,20 @@
 			files = (
 				EBDBD5FF1D6872D100984EC4 /* Helper.swift in Sources */,
 				EBDBD6321D69D7F200984EC4 /* MainTableViewDelegate.m in Sources */,
-				EBDBD5F51D68625D00984EC4 /* Trip.swift in Sources */,
+				EB4AF29D1D69F33B00C25D45 /* BusTrip.swift in Sources */,
 				EBDBD6261D69B69800984EC4 /* MainCell.m in Sources */,
 				EBDBD5E31D685C7400984EC4 /* main.m in Sources */,
 				EBDBD6291D69B6BF00984EC4 /* MainViewController.m in Sources */,
+				EB4AF29F1D69F33B00C25D45 /* TrainTrip.swift in Sources */,
+				EBF6D8B31D69E97700916F4C /* TripManager.swift in Sources */,
 				EBDBD5F01D685E1C00984EC4 /* TrainsAPIRequest.swift in Sources */,
-				EBDBD5FB1D6865B600984EC4 /* TrainTrip.swift in Sources */,
 				EBDBD5F21D685E2A00984EC4 /* BusesAPIRequest.swift in Sources */,
 				EBDBD62F1D69CF5C00984EC4 /* VehicleSelector.m in Sources */,
 				EBDBD5EE1D685E0600984EC4 /* FlightsAPIRequest.swift in Sources */,
+				EB4AF2A41D69F53700C25D45 /* LocalStorage.swift in Sources */,
+				EB4AF29E1D69F33B00C25D45 /* FlightTrip.swift in Sources */,
 				EBDBD5EB1D685D6F00984EC4 /* APIRequestProtocol.swift in Sources */,
-				EBDBD5F91D6865AE00984EC4 /* FlightTrip.swift in Sources */,
-				EBDBD5F71D6864D500984EC4 /* BusTrip.swift in Sources */,
+				EB4AF2A01D69F33B00C25D45 /* Trip.swift in Sources */,
 				EBDBD5E11D685C7400984EC4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,15 +491,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB4AF2AA1D69FADC00C25D45 /* Trip.swift in Sources */,
 				EBDBD61F1D69A68F00984EC4 /* Helper.swift in Sources */,
+				EB4AF2A71D69FAD900C25D45 /* BusTrip.swift in Sources */,
 				EBDBD61C1D69A67600984EC4 /* BusesAPIRequest.swift in Sources */,
+				EB4AF2A91D69FADC00C25D45 /* TrainTrip.swift in Sources */,
 				EBDBD6191D69A67000984EC4 /* APIRequestProtocol.swift in Sources */,
-				EBDBD6171D69A66D00984EC4 /* FlightTrip.swift in Sources */,
-				EBDBD6161D69A66900984EC4 /* Trip.swift in Sources */,
-				EBDBD6111D688BBD00984EC4 /* BusTrip.swift in Sources */,
-				EBDBD6181D69A66D00984EC4 /* TrainTrip.swift in Sources */,
 				EBDBD61E1D69A67600984EC4 /* TrainsAPIRequest.swift in Sources */,
 				EBDBD61D1D69A67600984EC4 /* FlightsAPIRequest.swift in Sources */,
+				EB4AF2A81D69FADC00C25D45 /* FlightTrip.swift in Sources */,
+				EB4AF2A61D69FA8B00C25D45 /* TripTests.swift in Sources */,
 				EBDBD6071D6888AE00984EC4 /* APIRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
