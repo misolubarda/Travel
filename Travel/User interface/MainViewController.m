@@ -48,15 +48,33 @@
         case VehicleSelectorButtonType_Train:
         {
             [TripManager fetchTrainTripsWithCompletion:^(NSArray<TrainTrip *> * _Nullable response) {
-                [self.tableViewDelegate setupWithTrips:response ofClass:[TrainTrip class]];
-                [self.tableView reloadData];
+                [self reloadTableWithTrips:response ofClass:[TrainTrip class]];
+            }];
+            break;
+        }
+        case VehicleSelectorButtonType_Bus:
+        {
+            [TripManager fetchBusTripsWithCompletion:^(NSArray<BusTrip *> * _Nullable response) {
+                [self reloadTableWithTrips:response ofClass:[BusTrip class]];
+            }];
+            break;
+        }
+        case VehicleSelectorButtonType_Flight:
+        {
+            [TripManager fetchFlightTripsWithCompletion:^(NSArray<FlightTrip *> * _Nullable response) {
+                [self reloadTableWithTrips:response ofClass:[FlightTrip class]];
             }];
             break;
         }
         default:
             break;
     }
-    
+}
+
+- (void)reloadTableWithTrips:(NSArray *)trips ofClass:(Class)tripClass {
+    [self.tableViewDelegate setupWithTrips:trips ofClass:tripClass];
+    [self.tableView reloadData];
+    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
 }
 
 @end

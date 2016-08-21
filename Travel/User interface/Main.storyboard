@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -59,21 +58,21 @@
                                 <rect key="frame" x="0.0" y="139" width="600" height="402"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MainCell" rowHeight="117" id="NJO-EZ-oF3" customClass="MainCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reuseIdentifier" rowHeight="117" id="NJO-EZ-oF3" customClass="MainCell">
                                         <rect key="frame" x="0.0" y="28" width="600" height="117"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NJO-EZ-oF3" id="sm6-Fq-4rP">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="117"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6EV-16-Gf0">
-                                                    <rect key="frame" x="8" y="8" width="200" height="49"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DB" translatesAutoresizingMaskIntoConstraints="NO" id="6EV-16-Gf0">
+                                                    <rect key="frame" x="20" y="8" width="50" height="49"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="49" id="Vs3-IF-Agh"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Age-wS-Yku">
-                                                    <rect key="frame" x="8" y="77" width="38" height="21"/>
+                                                    <rect key="frame" x="20" y="77" width="38" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -94,14 +93,13 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="Age-wS-Yku" secondAttribute="bottom" constant="18.5" id="1Pu-1D-nZm"/>
                                                 <constraint firstItem="VL9-ao-yRK" firstAttribute="baseline" secondItem="Age-wS-Yku" secondAttribute="baseline" id="3fU-Je-qb0"/>
-                                                <constraint firstItem="6EV-16-Gf0" firstAttribute="leading" secondItem="sm6-Fq-4rP" secondAttribute="leading" constant="8" id="53w-Lo-JHH"/>
+                                                <constraint firstItem="6EV-16-Gf0" firstAttribute="leading" secondItem="sm6-Fq-4rP" secondAttribute="leading" constant="20" id="53w-Lo-JHH"/>
                                                 <constraint firstItem="RJn-Z2-8Ey" firstAttribute="centerY" secondItem="6EV-16-Gf0" secondAttribute="centerY" id="7ZL-uf-vGo"/>
                                                 <constraint firstItem="Age-wS-Yku" firstAttribute="leading" secondItem="6EV-16-Gf0" secondAttribute="leading" id="CaJ-H6-o6y"/>
                                                 <constraint firstItem="Age-wS-Yku" firstAttribute="top" secondItem="6EV-16-Gf0" secondAttribute="bottom" constant="20" id="PGq-8w-Ozb"/>
                                                 <constraint firstAttribute="trailing" secondItem="RJn-Z2-8Ey" secondAttribute="trailing" constant="35" id="SSG-LS-90R"/>
                                                 <constraint firstAttribute="trailing" secondItem="VL9-ao-yRK" secondAttribute="trailing" constant="35" id="YcV-cr-ioq"/>
                                                 <constraint firstItem="6EV-16-Gf0" firstAttribute="top" secondItem="sm6-Fq-4rP" secondAttribute="top" constant="8" id="egl-Si-LNb"/>
-                                                <constraint firstItem="6EV-16-Gf0" firstAttribute="width" secondItem="sm6-Fq-4rP" secondAttribute="width" multiplier="200:600" id="lVO-jt-NPR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -116,30 +114,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="52M-an-nXm" userLabel="Footer view">
                                 <rect key="frame" x="0.0" y="541" width="600" height="60"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FnS-de-5ej">
-                                        <rect key="frame" x="8" y="8" width="44" height="44"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGQ-KG-hyn">
-                                                <rect key="frame" x="5" y="11" width="33" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="nGQ-KG-hyn" firstAttribute="centerY" secondItem="FnS-de-5ej" secondAttribute="centerY" id="OC2-gL-3rn"/>
-                                            <constraint firstItem="nGQ-KG-hyn" firstAttribute="centerX" secondItem="FnS-de-5ej" secondAttribute="centerX" id="z7Q-yn-LLs"/>
-                                            <constraint firstAttribute="width" secondItem="FnS-de-5ej" secondAttribute="height" id="zub-0K-FOP"/>
-                                        </constraints>
-                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfJ-kv-UIp">
+                                        <rect key="frame" x="8" y="15" width="30" height="30"/>
+                                        <state key="normal" title="Sort">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.090196078430000007" green="0.38823529410000002" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="FnS-de-5ej" firstAttribute="top" secondItem="52M-an-nXm" secondAttribute="top" constant="8" id="2ab-i9-ZDp"/>
-                                    <constraint firstItem="FnS-de-5ej" firstAttribute="leading" secondItem="52M-an-nXm" secondAttribute="leading" constant="8" id="EJI-oO-3es"/>
                                     <constraint firstAttribute="height" constant="60" id="Yv4-6b-43T"/>
-                                    <constraint firstAttribute="bottom" secondItem="FnS-de-5ej" secondAttribute="bottom" constant="8" id="eoZ-qc-RH9"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -167,4 +151,7 @@
             <point key="canvasLocation" x="565" y="364"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DB" width="50" height="35"/>
+    </resources>
 </document>

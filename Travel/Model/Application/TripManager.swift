@@ -14,8 +14,9 @@ enum TripManagerTripType {
 
 @objc class TripManager: NSObject {
     
+    static let mainInstance = TripManager()
     static let baseURL = NSURL(string: "https://api.myjson.com/bins/")!
-    
+        
     @objc class func fetchBusTripsWithCompletion(completion: (response: [BusTrip]?) -> Void) {
         
         // Fetch trips from local storage first.
@@ -78,5 +79,4 @@ enum TripManagerTripType {
         }
         trainRequest.execute()
     }
-
 }
