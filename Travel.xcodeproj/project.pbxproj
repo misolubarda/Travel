@@ -22,7 +22,28 @@
 		EBDBD5F91D6865AE00984EC4 /* FlightTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5F81D6865AE00984EC4 /* FlightTrip.swift */; };
 		EBDBD5FB1D6865B600984EC4 /* TrainTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5FA1D6865B600984EC4 /* TrainTrip.swift */; };
 		EBDBD5FF1D6872D100984EC4 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5FE1D6872D100984EC4 /* Helper.swift */; };
+		EBDBD6071D6888AE00984EC4 /* APIRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD6061D6888AE00984EC4 /* APIRequestTests.swift */; };
+		EBDBD6111D688BBD00984EC4 /* BusTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5F61D6864D500984EC4 /* BusTrip.swift */; };
+		EBDBD6151D688CF000984EC4 /* BusesJSONString.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBDBD6141D688CF000984EC4 /* BusesJSONString.txt */; };
+		EBDBD6161D69A66900984EC4 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5F41D68625D00984EC4 /* Trip.swift */; };
+		EBDBD6171D69A66D00984EC4 /* FlightTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5F81D6865AE00984EC4 /* FlightTrip.swift */; };
+		EBDBD6181D69A66D00984EC4 /* TrainTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5FA1D6865B600984EC4 /* TrainTrip.swift */; };
+		EBDBD6191D69A67000984EC4 /* APIRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5EA1D685D6F00984EC4 /* APIRequestProtocol.swift */; };
+		EBDBD61C1D69A67600984EC4 /* BusesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5F11D685E2A00984EC4 /* BusesRequest.swift */; };
+		EBDBD61D1D69A67600984EC4 /* FlightsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5ED1D685E0600984EC4 /* FlightsRequest.swift */; };
+		EBDBD61E1D69A67600984EC4 /* TrainsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5EF1D685E1C00984EC4 /* TrainsRequest.swift */; };
+		EBDBD61F1D69A68F00984EC4 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5FE1D6872D100984EC4 /* Helper.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBDBD6091D6888AE00984EC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBDBD5B81D685A5900984EC4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBDBD5BF1D685A5900984EC4;
+			remoteInfo = Travel;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		EBDBD5C01D685A5900984EC4 /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,10 +64,21 @@
 		EBDBD5F81D6865AE00984EC4 /* FlightTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightTrip.swift; sourceTree = "<group>"; };
 		EBDBD5FA1D6865B600984EC4 /* TrainTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainTrip.swift; sourceTree = "<group>"; };
 		EBDBD5FE1D6872D100984EC4 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		EBDBD6041D6888AE00984EC4 /* TravelUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBDBD6061D6888AE00984EC4 /* APIRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestTests.swift; sourceTree = "<group>"; };
+		EBDBD6081D6888AE00984EC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBDBD6141D688CF000984EC4 /* BusesJSONString.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BusesJSONString.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EBDBD5BD1D685A5900984EC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBDBD6011D6888AE00984EC4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				EBDBD5C21D685A5900984EC4 /* Travel */,
+				EBDBD6051D6888AE00984EC4 /* TravelUnitTests */,
 				EBDBD5C11D685A5900984EC4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				EBDBD5C01D685A5900984EC4 /* Travel.app */,
+				EBDBD6041D6888AE00984EC4 /* TravelUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,9 +152,9 @@
 			children = (
 				EBDBD5F31D6861A700984EC4 /* Entities */,
 				EBDBD5EA1D685D6F00984EC4 /* APIRequestProtocol.swift */,
+				EBDBD5F11D685E2A00984EC4 /* BusesRequest.swift */,
 				EBDBD5ED1D685E0600984EC4 /* FlightsRequest.swift */,
 				EBDBD5EF1D685E1C00984EC4 /* TrainsRequest.swift */,
-				EBDBD5F11D685E2A00984EC4 /* BusesRequest.swift */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -144,6 +178,16 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		EBDBD6051D6888AE00984EC4 /* TravelUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBDBD6061D6888AE00984EC4 /* APIRequestTests.swift */,
+				EBDBD6081D6888AE00984EC4 /* Info.plist */,
+				EBDBD6141D688CF000984EC4 /* BusesJSONString.txt */,
+			);
+			path = TravelUnitTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,17 +208,40 @@
 			productReference = EBDBD5C01D685A5900984EC4 /* Travel.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EBDBD6031D6888AE00984EC4 /* TravelUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBDBD60B1D6888AE00984EC4 /* Build configuration list for PBXNativeTarget "TravelUnitTests" */;
+			buildPhases = (
+				EBDBD6001D6888AE00984EC4 /* Sources */,
+				EBDBD6011D6888AE00984EC4 /* Frameworks */,
+				EBDBD6021D6888AE00984EC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBDBD60A1D6888AE00984EC4 /* PBXTargetDependency */,
+			);
+			name = TravelUnitTests;
+			productName = TravelUnitTests;
+			productReference = EBDBD6041D6888AE00984EC4 /* TravelUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		EBDBD5B81D685A5900984EC4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = test;
 				TargetAttributes = {
 					EBDBD5BF1D685A5900984EC4 = {
 						CreatedOnToolsVersion = 7.3.1;
+					};
+					EBDBD6031D6888AE00984EC4 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = EBDBD5BF1D685A5900984EC4;
 					};
 				};
 			};
@@ -192,6 +259,7 @@
 			projectRoot = "";
 			targets = (
 				EBDBD5BF1D685A5900984EC4 /* Travel */,
+				EBDBD6031D6888AE00984EC4 /* TravelUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -205,6 +273,14 @@
 				EBDBD5E21D685C7400984EC4 /* Info.plist in Resources */,
 				EBDBD5D01D685A5A00984EC4 /* Assets.xcassets in Resources */,
 				EBDBD5E71D685C8500984EC4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBDBD6021D6888AE00984EC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBDBD6151D688CF000984EC4 /* BusesJSONString.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +305,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBDBD6001D6888AE00984EC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBDBD61F1D69A68F00984EC4 /* Helper.swift in Sources */,
+				EBDBD61C1D69A67600984EC4 /* BusesRequest.swift in Sources */,
+				EBDBD6191D69A67000984EC4 /* APIRequestProtocol.swift in Sources */,
+				EBDBD6171D69A66D00984EC4 /* FlightTrip.swift in Sources */,
+				EBDBD6161D69A66900984EC4 /* Trip.swift in Sources */,
+				EBDBD6111D688BBD00984EC4 /* BusTrip.swift in Sources */,
+				EBDBD6181D69A66D00984EC4 /* TrainTrip.swift in Sources */,
+				EBDBD61E1D69A67600984EC4 /* TrainsRequest.swift in Sources */,
+				EBDBD61D1D69A67600984EC4 /* FlightsRequest.swift in Sources */,
+				EBDBD6071D6888AE00984EC4 /* APIRequestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBDBD60A1D6888AE00984EC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBDBD5BF1D685A5900984EC4 /* Travel */;
+			targetProxy = EBDBD6091D6888AE00984EC4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		EBDBD5D51D685A5A00984EC4 /* Debug */ = {
@@ -343,6 +444,31 @@
 			};
 			name = Release;
 		};
+		EBDBD60C1D6888AE00984EC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TravelUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.test.TravelUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Travel.app/Travel";
+			};
+			name = Debug;
+		};
+		EBDBD60D1D6888AE00984EC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TravelUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.test.TravelUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Travel.app/Travel";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -360,6 +486,14 @@
 			buildConfigurations = (
 				EBDBD5D81D685A5A00984EC4 /* Debug */,
 				EBDBD5D91D685A5A00984EC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EBDBD60B1D6888AE00984EC4 /* Build configuration list for PBXNativeTarget "TravelUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBDBD60C1D6888AE00984EC4 /* Debug */,
+				EBDBD60D1D6888AE00984EC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

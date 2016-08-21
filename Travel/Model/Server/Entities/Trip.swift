@@ -10,7 +10,7 @@ import Foundation
 
 protocol Trip: class {
     
-    var vehicleID: String {get set}
+    var vehicleID: Int {get set}
     var providerLogo: NSURL {get set}
     var priceInEuro: Float {get set}
     var departureTime: NSDate {get set}
@@ -22,13 +22,15 @@ protocol Trip: class {
 
 extension Trip {
     init(JSONDict: [String: AnyObject]) throws {
-        guard let id = JSONDict["id"] as? String else {
+        guard let id = JSONDict["id"] as? Int else {
             throw TripError.ParsingID
         }
         
-        guard let logo = JSONDict["provider_logo"] as? String else {
+        guard var logo = JSONDict["provider_logo"] as? String else {
             throw TripError.ParsingProviderLogo
         }
+        
+        logo = logo.stringByReplacingOccurrencesOfString("{size}", withString: "63")
         
         guard let logoURL = NSURL(string: logo) else {
             throw TripError.ParsingProviderLogo

@@ -9,7 +9,7 @@
 import Foundation
 
 @objc final class FlightTrip: NSObject, Trip {
-    var vehicleID: String = ""
+    var vehicleID: Int = 0
     var providerLogo: NSURL = NSURL()
     var priceInEuro: Float = 0
     var departureTime: NSDate = NSDate()

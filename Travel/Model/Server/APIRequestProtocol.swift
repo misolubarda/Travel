@@ -40,27 +40,27 @@ extension APIRequestProtocol {
      
      Usage without error rethrow:
      
-     apiRequest.prepareWithCompletion() { (response: () throws -> NSData)
-     do {
-     let response = try response()
-     // Continue using response.
+         apiRequest.prepareWithCompletion() { (response: () throws -> NSData)
+         do {
+            let response = try response()
+                // Continue using response.
      
-     } catch let error {
-     // Handle error
+            } catch let error {
+                // Handle error
      
-     }
-     }
+            }
+         }
      
      Usege with error rethrow:
      
-     //Inside a funciton that throws error
+         //Inside a funciton that throws error
      
-     apiRequest.prepareWithCompletion() { (response: () throws -> NSData)
+         apiRequest.prepareWithCompletion() { (response: () throws -> NSData)
      
-     let response = try response()
-     // Continue using response.
+            let response = try response()
+            // Continue using response.
      
-     }
+         }
      
      
      - parameter completion: Completion returns APIResponse or throws error if NSURLSession returns NSError.

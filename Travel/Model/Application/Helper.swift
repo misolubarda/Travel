@@ -12,7 +12,7 @@ import Foundation
     
     static func dateFormatter() -> NSDateFormatter {
         let formatter = NSDateFormatter()
-        formatter.dateFormat = "h:mm"
+        formatter.dateFormat = "H:mm"
         return formatter
     }
 }
