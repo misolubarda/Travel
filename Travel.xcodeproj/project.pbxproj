@@ -35,6 +35,8 @@
 		EBDBD61F1D69A68F00984EC4 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5FE1D6872D100984EC4 /* Helper.swift */; };
 		EBDBD6211D69AE2D00984EC4 /* FlightsJSONString.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBDBD6201D69AE2D00984EC4 /* FlightsJSONString.txt */; };
 		EBDBD6231D69AE3B00984EC4 /* TrainsJSONString.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBDBD6221D69AE3B00984EC4 /* TrainsJSONString.txt */; };
+		EBDBD6261D69B69800984EC4 /* MainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD6251D69B69800984EC4 /* MainCell.m */; };
+		EBDBD6291D69B6BF00984EC4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD6281D69B6BF00984EC4 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,10 @@
 		EBDBD6141D688CF000984EC4 /* BusesJSONString.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BusesJSONString.txt; sourceTree = "<group>"; };
 		EBDBD6201D69AE2D00984EC4 /* FlightsJSONString.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FlightsJSONString.txt; sourceTree = "<group>"; };
 		EBDBD6221D69AE3B00984EC4 /* TrainsJSONString.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TrainsJSONString.txt; sourceTree = "<group>"; };
+		EBDBD6241D69B69800984EC4 /* MainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCell.h; sourceTree = "<group>"; };
+		EBDBD6251D69B69800984EC4 /* MainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCell.m; sourceTree = "<group>"; };
+		EBDBD6271D69B6BF00984EC4 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		EBDBD6281D69B6BF00984EC4 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,10 @@
 			children = (
 				EBDBD5E41D685C8500984EC4 /* LaunchScreen.storyboard */,
 				EBDBD5E51D685C8500984EC4 /* Main.storyboard */,
+				EBDBD6271D69B6BF00984EC4 /* MainViewController.h */,
+				EBDBD6281D69B6BF00984EC4 /* MainViewController.m */,
+				EBDBD6241D69B69800984EC4 /* MainCell.h */,
+				EBDBD6251D69B69800984EC4 /* MainCell.m */,
 			);
 			path = "User interface";
 			sourceTree = "<group>";
@@ -301,7 +311,9 @@
 			files = (
 				EBDBD5FF1D6872D100984EC4 /* Helper.swift in Sources */,
 				EBDBD5F51D68625D00984EC4 /* Trip.swift in Sources */,
+				EBDBD6261D69B69800984EC4 /* MainCell.m in Sources */,
 				EBDBD5E31D685C7400984EC4 /* main.m in Sources */,
+				EBDBD6291D69B6BF00984EC4 /* MainViewController.m in Sources */,
 				EBDBD5F01D685E1C00984EC4 /* TrainsRequest.swift in Sources */,
 				EBDBD5FB1D6865B600984EC4 /* TrainTrip.swift in Sources */,
 				EBDBD5F21D685E2A00984EC4 /* BusesRequest.swift in Sources */,
