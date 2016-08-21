@@ -17,5 +17,12 @@ import Foundation
     var stops: Int = 0
 
     override init() {}
+    
+    func duration() -> NSDate? {
+        let calendar = NSCalendar.autoupdatingCurrentCalendar()
+        let components = calendar.components([.Hour, .Minute], fromDate: self.departureTime, toDate: self.arrivalTime, options: [])
+        let date = calendar.dateFromComponents(components)
+        return date
+    }
 }
 

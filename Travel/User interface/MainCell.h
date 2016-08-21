@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *durationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *stopsLabel;
 
 @end

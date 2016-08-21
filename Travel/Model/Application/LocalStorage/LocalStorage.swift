@@ -13,7 +13,8 @@ struct LocalStorage {
     static func fetchTrips<T: Trip>() throws -> [T] {
         
         let defaults = NSUserDefaults.standardUserDefaults()
-        guard let tripArray = defaults.objectForKey("testTripEncodingDecoding") as? [[String: AnyObject]] else {
+        let defaultsKey = try self.defaultsKeyForTripType(T)
+        guard let tripArray = defaults.objectForKey(defaultsKey) as? [[String: AnyObject]] else {
             return []
         }
         
@@ -31,6 +32,30 @@ struct LocalStorage {
         }
         
         let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject(tripArray, forKey: "testTripEncodingDecoding")
+        let defaultsKey = try self.defaultsKeyForTripType(T)
+        defaults.setObject(tripArray, forKey: defaultsKey)
+    }
+    
+    static func defaultsKeyForTripType<T: Trip>(type: T.Type) throws -> String {
+        var defaultsKey: String?
+        if T.self == FlightTrip.self {
+            defaultsKey = "flightsKey"
+        } else if T.self == BusTrip.self {
+            defaultsKey = "busesKey"
+        } else if T.self == TrainTrip.self {
+            defaultsKey = "trainsKey"
+        }
+        
+        guard let recognizedDefaultsKey = defaultsKey else {
+            throw LocalStorageError.DefaultsKeyUnknown
+        }
+        
+        return recognizedDefaultsKey
+    }
+}
+
+extension LocalStorage {
+    enum LocalStorageError: ErrorType {
+        case DefaultsKeyUnknown
     }
 }

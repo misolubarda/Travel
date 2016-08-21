@@ -8,8 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSUInteger, TripSortingType) {
+    TripSortingType_Arrival,
+    TripSortingType_Departure,
+    TripSortingType_Duration
+};
+
 @interface MainTableViewDelegate : NSObject <UITableViewDelegate, UITableViewDataSource>
 
 - (void)setupWithTrips:(NSArray *)trips ofClass:(Class)tripClass;
+- (void)sortBy:(TripSortingType)sortingType;
 
 @end

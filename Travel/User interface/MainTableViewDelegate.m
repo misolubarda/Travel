@@ -16,6 +16,7 @@
 
 @property (nonatomic, strong) NSArray *trips;
 @property (nonatomic) Class tripClass;
+@property (nonatomic) TripSortingType lastSortingType;
 
 @end
 
@@ -23,10 +24,30 @@
 
 static NSString *reuseIdentifier = @"reuseIdentifier";
 
+#pragma mark - Setup
 - (void)setupWithTrips:(NSArray *)trips ofClass:(Class)tripClass {
     self.trips = trips;
     self.tripClass = tripClass;
+    [self sortBy:self.lastSortingType];
 }
+
+#pragma mark - Sort
+
+- (void)sortBy:(TripSortingType)sortingType {
+    self.lastSortingType = sortingType;
+    self.trips = [self.trips sortedArrayUsingComparator:^NSComparisonResult(TrainTrip * _Nonnull trip1, TrainTrip * _Nonnull trip2) {
+        switch (sortingType) {
+            case TripSortingType_Arrival:
+                return [trip1.arrivalTime compare:trip2.arrivalTime];
+            case TripSortingType_Departure:
+                return [trip1.departureTime compare:trip2.departureTime];
+            case TripSortingType_Duration:
+                return [trip1.duration compare:trip2.duration];
+        }
+    }];
+}
+
+#pragma mark - UITableViewDelegate, UITableViewDataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MainCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
@@ -48,12 +69,13 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
         NSString *tripTimeString = [NSString stringWithFormat:@"%@ - %@", departureTime, arrivalTime];
         cell.timeLabel.text = tripTimeString;
         
-        NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
-        NSDateComponents *components = [calendar components:NSCalendarUnitHour | NSCalendarUnitMinute fromDate:trip.departureTime toDate:trip.arrivalTime options:NSCalendarMatchFirst];
-        NSString *duration = [NSString stringWithFormat:@"Duration: %@:%@h", @(components.hour), @(components.minute)];
-        cell.durationLabel.text = duration;
+        NSDate *duration = [trip duration];
+        NSString *durationString = [NSString stringWithFormat:@"Duration: %@", [[Helper dateFormatter] stringFromDate:duration]];
+        cell.durationLabel.text = durationString;
         
         cell.priceLabel.text = [NSString stringWithFormat:@"€%.2f", trip.priceInEuro];
+        
+        cell.stopsLabel.text = [NSString stringWithFormat:@"Stops: %@", @(trip.stops)];
     }
     
     return cell;
@@ -64,7 +86,12 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 117;
+    return 140;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"Offer details are not yet implemented!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
 }
 
 @end

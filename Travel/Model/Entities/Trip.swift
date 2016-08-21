@@ -69,8 +69,7 @@ extension Trip {
         self.arrivalTime = arrival
         self.stops = stopsNum
     }
-    
-    
+        
     func exportToJSONDict() -> [String: AnyObject] {
         
         var jsonDict = [String: AnyObject]()

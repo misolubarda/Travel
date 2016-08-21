@@ -16,8 +16,14 @@ enum TripManagerTripType {
     
     static let mainInstance = TripManager()
     static let baseURL = NSURL(string: "https://api.myjson.com/bins/")!
+    
+    /// Tracking last request to prevent multiple async responses.
+    var lastRequest: NSDate?
         
     @objc class func fetchBusTripsWithCompletion(completion: (response: [BusTrip]?) -> Void) {
+        
+        let requestTimestamp = NSDate()
+        self.mainInstance.lastRequest = requestTimestamp
         
         // Fetch trips from local storage first.
         let busTrips: [BusTrip]? = try? LocalStorage.fetchTrips()
@@ -31,8 +37,12 @@ enum TripManagerTripType {
         
         busRequest.prepareWithCompletion { (response: () throws -> [BusTrip]) in
             
+            if self.mainInstance.lastRequest != requestTimestamp {
+                return;
+            }
+            
             if let response = try? response() {
-                // No server error, return response
+                // No server error, save to local storage and return response
                 _ = try? LocalStorage.saveTrips(response)
                 completion(response: response)
                 return
@@ -45,12 +55,29 @@ enum TripManagerTripType {
     }
     
     @objc class func fetchFlightTripsWithCompletion(completion: (response: [FlightTrip]?) -> Void) {
+        
+        let requestTimestamp = NSDate()
+        self.mainInstance.lastRequest = requestTimestamp
+
+        // Fetch trips from local storage first.
+        let flightTrips: [FlightTrip]? = try? LocalStorage.fetchTrips()
+        
+        if let flightTrips = flightTrips {
+            completion(response: flightTrips);
+        }
+        
+        // Fetch trips from server.
         let flightRequest = FlightsAPIRequest(baseURL: baseURL, responseQueue: dispatch_get_main_queue())
         
         flightRequest.prepareWithCompletion { (response: () throws -> [FlightTrip]) in
             
+            if self.mainInstance.lastRequest != requestTimestamp {
+                return;
+            }
+
             if let response = try? response() {
-                // No server error, return response
+                // No server error, save to local storage and return response
+                _ = try? LocalStorage.saveTrips(response)
                 completion(response: response)
                 return
             } else {
@@ -63,12 +90,29 @@ enum TripManagerTripType {
     }
     
     @objc class func fetchTrainTripsWithCompletion(completion: (response: [TrainTrip]?) -> Void) {
+        
+        let requestTimestamp = NSDate()
+        self.mainInstance.lastRequest = requestTimestamp
+
+        // Fetch trips from local storage first.
+        let trainTrips: [TrainTrip]? = try? LocalStorage.fetchTrips()
+        
+        if let trainTrips = trainTrips {
+            completion(response: trainTrips);
+        }
+        
+        // Fetch trips from server.
         let trainRequest = TrainsAPIRequest(baseURL: baseURL, responseQueue: dispatch_get_main_queue())
         
         trainRequest.prepareWithCompletion { (response: () throws -> [TrainTrip]) in
             
+            if self.mainInstance.lastRequest != requestTimestamp {
+                return;
+            }
+
             if let response = try? response() {
-                // No server error, return response
+                // No server error, save to local storage and return response
+                _ = try? LocalStorage.saveTrips(response)
                 completion(response: response)
                 return
             } else {
