@@ -32,20 +32,70 @@ class APIRequestTests: XCTestCase {
         let path = bundle.pathForResource("BusesJSONString", ofType: "txt")
         let data = NSFileManager.defaultManager().contentsAtPath(path!)
         
-        let busTrips = try! busAPIRequest.responseParsing(data: data!)
+        let trips = try! busAPIRequest.responseParsing(data: data!)
         
-        XCTAssertTrue(busTrips.count == 100)
+        XCTAssertTrue(trips.count == 100)
         
-        let busTrip1 = busTrips[0]
-        let departureString = Helper.dateFormatter().stringFromDate(busTrip1.departureTime)
-        let arrivalString = Helper.dateFormatter().stringFromDate(busTrip1.arrivalTime)
-        let logoUrlString = busTrip1.providerLogo.absoluteString
+        let trip1 = trips[0]
+        let departureString = Helper.dateFormatter().stringFromDate(trip1.departureTime)
+        let arrivalString = Helper.dateFormatter().stringFromDate(trip1.arrivalTime)
+        let logoUrlString = trip1.providerLogo.absoluteString
         
-        XCTAssertTrue(busTrip1.vehicleID == 1)
+        XCTAssertTrue(trip1.vehicleID == 1)
         XCTAssertTrue(departureString == "2:41")
         XCTAssertTrue(arrivalString == "16:56")
-        XCTAssertTrue(busTrip1.priceInEuro == 5.48)
+        XCTAssertTrue(trip1.priceInEuro == 5.48)
         XCTAssertTrue(logoUrlString == "http://cdn-goeuro.com/static_content/web/logos/63/postbus.png")
-        XCTAssertTrue(busTrip1.stops == 2)
-    }    
+        XCTAssertTrue(trip1.stops == 2)
+    }
+
+    func testFlightsBusAPIRequestParsing() {
+        
+        let flightsAPIRequest = FlightsAPIRequest(baseURL: NSURL(), responseQueue: dispatch_get_main_queue())
+        
+        let bundle = NSBundle(forClass: self.dynamicType)
+        let path = bundle.pathForResource("FlightsJSONString", ofType: "txt")
+        let data = NSFileManager.defaultManager().contentsAtPath(path!)
+        
+        let trips = try! flightsAPIRequest.responseParsing(data: data!)
+        
+        XCTAssertTrue(trips.count == 30)
+        
+        let trip1 = trips[0]
+        let departureString = Helper.dateFormatter().stringFromDate(trip1.departureTime)
+        let arrivalString = Helper.dateFormatter().stringFromDate(trip1.arrivalTime)
+        let logoUrlString = trip1.providerLogo.absoluteString
+        
+        XCTAssertTrue(trip1.vehicleID == 1)
+        XCTAssertTrue(departureString == "1:23")
+        XCTAssertTrue(arrivalString == "19:55")
+        XCTAssertTrue(trip1.priceInEuro == 38.88)
+        XCTAssertTrue(logoUrlString == "http://cdn-goeuro.com/static_content/web/logos/63/air_berlin.png")
+        XCTAssertTrue(trip1.stops == 0)
+    }
+    
+    func testTrainsBusAPIRequestParsing() {
+        
+        let trainsAPIRequest = TrainsAPIRequest(baseURL: NSURL(), responseQueue: dispatch_get_main_queue())
+        
+        let bundle = NSBundle(forClass: self.dynamicType)
+        let path = bundle.pathForResource("TrainsJSONString", ofType: "txt")
+        let data = NSFileManager.defaultManager().contentsAtPath(path!)
+        
+        let trips = try! trainsAPIRequest.responseParsing(data: data!)
+        
+        XCTAssertTrue(trips.count == 20)
+        
+        let trip1 = trips[0]
+        let departureString = Helper.dateFormatter().stringFromDate(trip1.departureTime)
+        let arrivalString = Helper.dateFormatter().stringFromDate(trip1.arrivalTime)
+        let logoUrlString = trip1.providerLogo.absoluteString
+        
+        XCTAssertTrue(trip1.vehicleID == 1)
+        XCTAssertTrue(departureString == "2:59")
+        XCTAssertTrue(arrivalString == "15:12")
+        XCTAssertTrue(trip1.priceInEuro == 61.2)
+        XCTAssertTrue(logoUrlString == "http://cdn-goeuro.com/static_content/web/logos/63/deutsche_bahn.png")
+        XCTAssertTrue(trip1.stops == 3)
+    }
 }

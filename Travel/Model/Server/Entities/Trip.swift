@@ -22,7 +22,7 @@ protocol Trip: class {
 
 extension Trip {
     init(JSONDict: [String: AnyObject]) throws {
-        guard let id = JSONDict["id"] as? Int else {
+        guard let id = JSONDict["id"]?.integerValue else {
             throw TripError.ParsingID
         }
         
@@ -36,7 +36,7 @@ extension Trip {
             throw TripError.ParsingProviderLogo
         }
         
-        guard let price = JSONDict["price_in_euros"] as? Float else {
+        guard let price = JSONDict["price_in_euros"]?.floatValue else {
             throw TripError.ParsingPrice
         }
         
@@ -56,7 +56,7 @@ extension Trip {
             throw TripError.ParsingArrival
         }
         
-        guard let stopsNum = JSONDict["number_of_stops"] as? Int else {
+        guard let stopsNum = JSONDict["number_of_stops"]?.integerValue else {
             throw TripError.ParsingNumberOfStops
         }
         

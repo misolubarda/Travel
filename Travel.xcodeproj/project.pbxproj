@@ -33,6 +33,8 @@
 		EBDBD61D1D69A67600984EC4 /* FlightsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5ED1D685E0600984EC4 /* FlightsRequest.swift */; };
 		EBDBD61E1D69A67600984EC4 /* TrainsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5EF1D685E1C00984EC4 /* TrainsRequest.swift */; };
 		EBDBD61F1D69A68F00984EC4 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBD5FE1D6872D100984EC4 /* Helper.swift */; };
+		EBDBD6211D69AE2D00984EC4 /* FlightsJSONString.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBDBD6201D69AE2D00984EC4 /* FlightsJSONString.txt */; };
+		EBDBD6231D69AE3B00984EC4 /* TrainsJSONString.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBDBD6221D69AE3B00984EC4 /* TrainsJSONString.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		EBDBD6061D6888AE00984EC4 /* APIRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestTests.swift; sourceTree = "<group>"; };
 		EBDBD6081D6888AE00984EC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBDBD6141D688CF000984EC4 /* BusesJSONString.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BusesJSONString.txt; sourceTree = "<group>"; };
+		EBDBD6201D69AE2D00984EC4 /* FlightsJSONString.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FlightsJSONString.txt; sourceTree = "<group>"; };
+		EBDBD6221D69AE3B00984EC4 /* TrainsJSONString.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TrainsJSONString.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +188,8 @@
 				EBDBD6061D6888AE00984EC4 /* APIRequestTests.swift */,
 				EBDBD6081D6888AE00984EC4 /* Info.plist */,
 				EBDBD6141D688CF000984EC4 /* BusesJSONString.txt */,
+				EBDBD6201D69AE2D00984EC4 /* FlightsJSONString.txt */,
+				EBDBD6221D69AE3B00984EC4 /* TrainsJSONString.txt */,
 			);
 			path = TravelUnitTests;
 			sourceTree = "<group>";
@@ -281,6 +287,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBDBD6151D688CF000984EC4 /* BusesJSONString.txt in Resources */,
+				EBDBD6211D69AE2D00984EC4 /* FlightsJSONString.txt in Resources */,
+				EBDBD6231D69AE3B00984EC4 /* TrainsJSONString.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
