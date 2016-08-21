@@ -92,6 +92,7 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"Offer details are not yet implemented!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
